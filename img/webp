@@ -1,0 +1,34 @@
+https://jesuisadmin.fr/convertir-vos-images-en-webp-nginx/ 
+
+find . -type f -iname "*.png" -print0 | xargs -0 -I {} \
+bash -c '[ ! -f "{}.webp" ] && { cwebp -z 9 -mt {} -o {}.webp; }'
+
+find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -print0 | xargs -0 -I {} \
+bash -c '[ ! -f "{}.webp" ] && { cwebp -q 82 -mt {} -o {}.webp; }'
+
+
+---------------------Search and Replace------------------------------- 
+sed -i 's/.jpg/.jpg.webp/g' namefile(css and html) sed -i 
+'s/.png/.png.webp/g' namefile 
+----------------------------------------------------------------------- 
+Voici les paramètres principaux à utiliser en arguments avec cwebp :
+
+
+
+
+
+git clone https://github.com/VirtuBox/img-optimize.git 
+
+    -lossless : pour encoder les images sans pertes (PNG)
+    -q : Est un indice de qualité, similaire au niveau de qualité des 
+images JPEG.
+    -z : Est un indice de compression en mode lossless, allant de 0 à 9, 
+où 9 est le niveau le plus haut, cela nécessite un temps de conversion 
+plus long mais permet d'obtenir un fichier plus léger en sortie
+    -mt : utiliser le multi-threading si possible Ces paramètres sont 
+très important pour la conversion en WebP, car l'utilisation d'un 
+argument inadapté au type d'image peut rendre le fichier WebP plus lourd 
+que le fichier original. Pour les images JPEG, il faut privilégier 
+l'usage de l'indice de qualité -q. Pour les images PNG, le plus simple 
+est d'utiliser -z pour définir le niveau de compression en mode 
+lossless.
