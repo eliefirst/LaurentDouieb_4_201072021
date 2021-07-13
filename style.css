@@ -640,7 +640,8 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: rgba(255, 255, 255, .7)!important;
+    
 }
 
 .container {
