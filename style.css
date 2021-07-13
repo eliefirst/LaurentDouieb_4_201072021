@@ -637,10 +637,17 @@ h6,
 p,
 label,
 .btn,
+section,
 a {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
+}
+.footer {
+    font-family: "helvetica";
+    font-weight: 400;
+    color: #FFF !important;
+
 }
 
 .container {
@@ -664,9 +671,26 @@ a {
     max-width: 520px;
     margin: auto auto auto auto;
 }
+.text-img {
+   font-size: 23px;
+
+}
+.text-img2 {
+   font-size: 20px;
+   font-style: italic;
+   font-weight: bold;
+   font-family: "helvetica";
+
+}
+.text-img3 {
+   font-size: 15px;
+}
+.text-img4 {
+   font-size: 22px;
+}
 
 p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .tight-width-whitespace {
@@ -687,6 +711,13 @@ p {
     font-size: 16px;
     font-weight: 700;
 }
+.btn-atomic-tangerine:focus {
+  background-color: #52173e;  
+}
+
+/*.cta-hero:hover {
+  background-color: #4c4c4c;  
+}*/
 
 .social {
     max-width: 400px;
@@ -772,7 +803,7 @@ h4 {
 }
 
 .btn-atomic-tangerine:hover {
-    background: #522917!important;
+    background: #4c4c4c!important;
     color: #FFFFFF!important;
 }
 
@@ -1020,6 +1051,7 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+    
 }
 @media (max-width: 767px) {
     .bloc-mob-center-text {
